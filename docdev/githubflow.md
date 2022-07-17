@@ -14,7 +14,7 @@
 
   ```sh
   $ git commit -m "initial commit"
-  $ git remote add origin git@github.com:hfujiyos/gatsbyjs-blog.git
+  $ git remote add origin git@github.com:hfujiyos/gatsbyjs-site.git
   $ git push -u origin main
   ```
 
