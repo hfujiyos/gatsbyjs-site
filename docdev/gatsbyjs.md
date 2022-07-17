@@ -1,6 +1,6 @@
 # GatsbyJS
 
-## 環境構築
+## 開発環境の構築
 
 - バージョン確認
 
@@ -33,6 +33,36 @@
   ```
 
   http://localhost:8000/
+
+## 追加ライブラリ導入
+
+- プラグインのインストール
+
+  ```sh
+  ローカルファイルシステムへのアクセス用プラグイン導入
+  $ npm install gatsby-source-filesystem
+
+  マークダウンファイルのHTML変換するGraphQL用プラグイン導入
+  $ npm install gatsby-transformer-remark
+  ```
+
+- gatsby-config.js にプラグイン設定
+
+  ```js
+  module.exports = {
+    ...
+    plugins: [
+      {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          name: `src`,
+          path: `${__dirname}/src/`,
+        },
+      },
+      "gatsby-transformer-remark",
+    ],
+  }
+  ```
 
 ## 参考文献
 
